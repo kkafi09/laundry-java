@@ -6,6 +6,16 @@ public class jenisLaundry {
     ArrayList<Integer> harga = new ArrayList<>();
     ArrayList<Integer> durasi = new ArrayList<>();
 
+    jenisLaundry(){
+        this.jenisLaundry.add("0 - Cepat");
+        this.harga.add(9000);
+        this.durasi.add(1); // day
+
+        this.jenisLaundry.add("1 - Lambat");
+        this.harga.add(4500);
+        this.durasi.add(3);
+    }
+
     public String getJenisLaundry(int id) {
         return this.jenisLaundry.get(id);
     }

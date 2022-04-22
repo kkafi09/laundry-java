@@ -51,11 +51,11 @@ public class Client {
         this.saldo.add(saldo);
     }
 
-    public void editSaldo(int id, int saldo){
+    public void editSaldo(int id, int saldo) {
         this.saldo.set(id, saldo);
     }
 
-    public int getJumlahClient(){
+    public int getJumlahClient() {
         return this.namaClient.size();
     }
 }
