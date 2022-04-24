@@ -19,8 +19,8 @@ public class Petugas {
         return this.namaPetugas.get(id);
     }
 
-    public void setNamaClient(String namaClient) {
-        this.namaPetugas.add(namaClient);
+    public void setNamaPetugas(String namaPetugas) {
+        this.namaPetugas.add(namaPetugas);
     }
 
     public String getAlamat(int id) {
@@ -51,7 +51,7 @@ public class Petugas {
         this.jabatan.set(id, jabatan);
     }
 
-    public int getJumlahClient(){
+    public int getJumlahPetugas(){
         return this.namaPetugas.size();
     }
 }

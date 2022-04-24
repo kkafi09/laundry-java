@@ -5,8 +5,8 @@ public class Laundry {
         Petugas petugas = new Petugas();
         Transaksi transaksi = new Transaksi();
         Laporan laporan = new Laporan();
+        jenisLaundry laundry = new jenisLaundry();
 
-
-
+        transaksi.start(client, petugas, laundry, laporan, transaksi);
     }
 }
