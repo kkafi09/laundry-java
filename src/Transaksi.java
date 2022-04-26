@@ -34,19 +34,20 @@ public class Transaksi {
     }
 
     public void prosesTransaksi(Client client, jenisLaundry laundry) {
-        System.out.println("PROSES LAUNDRY");
-        System.out.println("Nama : " + client.getNamaClient(idClient.get(0)));
-        System.out.println("Alamat : " + client.getAlamat(idClient.get(0)));
-        System.out.println("Telepon : " + client.getTelepon(idClient.get(0)));
-        System.out.println("Saldo : " + client.getSaldo(idClient.get(0)));
+        System.out.println("\n=======PROSES LAUNDRY=======");
+        System.out.println("Nama          : " + client.getNamaClient(idClient.get(0)));
+        System.out.println("Alamat        : " + client.getAlamat(idClient.get(0)));
+        System.out.println("Telepon       : " + client.getTelepon(idClient.get(0)));
+        System.out.println("Saldo         : " + client.getSaldo(idClient.get(0)));
         System.out.println("Jenis Laundry : " + laundry.getJenisLaundry(idJenisLaundry.get(0)));
-        System.out.println("Harga : " + laundry.getHarga(idJenisLaundry.get(0)) * banyak.get(0));
-        System.out.println("Durasi : " + laundry.getDurasi(idJenisLaundry.get(0)));
+        System.out.println("Harga         : " + laundry.getHarga(idJenisLaundry.get(0)) * banyak.get(0));
+        System.out.println("Durasi        : " + laundry.getDurasi(idJenisLaundry.get(0)));
 
-        globalTemp = client.getSaldo(idClient.get(0)) - (laundry.getHarga(0) * banyak.get(0));
+        globalTemp = client.getSaldo(idClient.get(0)) - (laundry.getHarga(idJenisLaundry.get(0)) * banyak.get(0));
 
-        System.out.println("Saldo anda menjadi : " + globalTemp);
-        System.out.println("TERIMAKASIH");
+        System.out.println("Saldo akhir   : " + globalTemp);
+        System.out.println("=========TERIMAKASIH=========");
+        System.out.println("=TELAH MENGGUNAKAN JASA KAMI=");
     }
 
     public void start(Client client, Petugas petugas, jenisLaundry laundry, Laporan laporan, Transaksi transaksi) {
@@ -55,6 +56,7 @@ public class Transaksi {
         laporan.laporan(laundry);
         laporan.laporan(transaksi, laundry, client);
 
+        System.out.println();
         inputTransaksi(client, laundry);
         prosesTransaksi(client, laundry);
 
